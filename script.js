@@ -47,3 +47,16 @@ const cursor = document.getElementById('cursor');
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-btn');
+    btn.classList.add('sent');
+    btn.querySelector('.btn-text').textContent = '¡Mensaje enviado!';
+    setTimeout(() => {
+      btn.classList.remove('sent');
+      btn.querySelector('.btn-text').textContent = 'Enviar mensaje';
+      e.target.reset();
+    }, 3000);
+  }
+  

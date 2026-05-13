@@ -453,7 +453,7 @@ section {
   display: flex;
   gap: 3rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
 }
 
 .contact-link {
@@ -565,10 +565,125 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    
   }
 
   .hero-number,
   .hero-scroll {
     display: none;
+  }
+}
+
+/* ================================
+   CONTACT FORM
+   ================================ */
+.contact-form {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 760px;
+  background: var(--ink);
+  padding: 2.5rem;
+  border-radius: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 246, 242, 0.5);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--paper);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(247, 246, 242, 0.2);
+  padding: 0.75rem 0;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(247, 246, 242, 0.35);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--paper);
+}
+
+.form-group textarea {
+  min-height: 160px;
+}
+
+.form-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--paper);
+  padding: 0.85rem 1.75rem;
+  cursor: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.form-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s;
+}
+
+.form-btn:hover {
+  background: transparent;
+  color: var(--paper);
+}
+
+.form-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.form-btn.sent {
+  background: transparent;
+  color: var(--paper);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
   }
 }
