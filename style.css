@@ -89,7 +89,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  mix-blend-mode: multiply;
+  background: var(--paper);
+  border-bottom: 5px solid var(--line);
 }
 
 .nav-logo {
@@ -131,9 +132,10 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 4rem 5rem;
+  padding: 7rem 4rem 5rem;
   position: relative;
   border-bottom: 1px solid var(--line);
+
 }
 
 .hero-number {
