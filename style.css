@@ -28,7 +28,6 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
-  cursor: none;
   overflow-x: hidden;
 }
 
@@ -62,6 +61,7 @@ body::before {
   transition: transform 0.1s ease, width 0.25s ease, height 0.25s ease;
 }
 
+
 #cursor-ring {
   position: fixed;
   width: 36px;
@@ -74,7 +74,6 @@ body::before {
   transition: transform 0.18s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   opacity: 0.4;
 }
-
 
 /* ================================
    NAVIGATION
